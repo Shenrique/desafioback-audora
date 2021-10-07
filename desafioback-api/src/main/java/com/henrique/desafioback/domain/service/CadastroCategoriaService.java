@@ -8,7 +8,6 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.henrique.desafioback.domain.exception.CategoriaNaoEncontradaException;
 import com.henrique.desafioback.domain.exception.EntidadeEmUsoException;
-import com.henrique.desafioback.domain.exception.ProdutoNaoEncontradoException;
 import com.henrique.desafioback.domain.model.Categoria;
 import com.henrique.desafioback.domain.repository.CategoriaRepository;
 
