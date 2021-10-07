@@ -14,7 +14,6 @@ import org.springframework.test.context.junit.jupiter.SpringExtension;
 import com.henrique.desafioback.domain.exception.CategoriaNaoEncontradaException;
 import com.henrique.desafioback.domain.exception.EntidadeNaoEncontradaException;
 import com.henrique.desafioback.domain.model.Categoria;
-import com.henrique.desafioback.domain.model.Produto;
 import com.henrique.desafioback.domain.service.CadastroCategoriaService;
 
 @SpringBootTest
