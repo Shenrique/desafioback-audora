@@ -40,5 +40,5 @@ values (2, utc_timestamp, 79, 0, 79);
 insert into item_pedido (id, pedido_id, produto_id, quantidade, preco_unitario, preco_total)
 values (3, 2, 6, 1, 79, 79);
 
-insert into categoria(id, nome, produto_id) values (1, "Comida Desconto", 1);
-insert into categoria(id, nome, produto_id) values (2, "Comida Sem Desconto", 2);
+insert into categoria(id, nome) values (1, "Comida Desconto");
+insert into categoria(id, nome) values (2, "Comida Sem Desconto");

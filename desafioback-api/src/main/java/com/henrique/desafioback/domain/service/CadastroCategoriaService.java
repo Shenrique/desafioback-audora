@@ -31,7 +31,7 @@ public class CadastroCategoriaService {
 			categoriaRepository.deleteById(categoriaId);
 			categoriaRepository.flush();
 		} catch (EmptyResultDataAccessException e) {
-			throw new ProdutoNaoEncontradoException(categoriaId);
+			throw new CategoriaNaoEncontradaException(categoriaId);
 
 		} catch (DataIntegrityViolationException e) {
 			throw new EntidadeEmUsoException(String.format(MSG_CATEGORIA_EM_USO, categoriaId));
