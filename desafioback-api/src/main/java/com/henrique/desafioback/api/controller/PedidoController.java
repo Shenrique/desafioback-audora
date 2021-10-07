@@ -6,6 +6,7 @@ import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -39,7 +40,7 @@ public class PedidoController {
 	
 	@Autowired
 	private PedidoInputDisassembler pedidoInputDisassembler;
-
+	
 
 	@GetMapping
 	public List<PedidoModel> listar() {
@@ -67,5 +68,11 @@ public class PedidoController {
 	    } catch (EntidadeNaoEncontradaException e) {
 	        throw new NegocioException(e.getMessage(), e);
 	    }
+	}
+	
+	@DeleteMapping("/{pedidoId}")
+	@ResponseStatus(HttpStatus.NO_CONTENT)
+	public void remover(@PathVariable @Valid Long pedidoId) {
+		emissaoPedido.excluir(pedidoId);
 	}
 }
